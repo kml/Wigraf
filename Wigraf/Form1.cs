@@ -9,8 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 
 // WinGraphviz .NET Wrapper
-using WinGraphviz;
-using WinGraphviz.Exceptions;
+using Wigraf.WinGraphviz;
 
 namespace Wigraf
 {

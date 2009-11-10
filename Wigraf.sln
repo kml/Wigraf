@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigraf", "Wigraf\Wigraf.csproj", "{C0C67C35-0F46-40F8-93F1-EF5887B4181E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wigraf.WinGraphviz", "Wigraf.WinGraphviz\Wigraf.WinGraphviz.csproj", "{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{C0C67C35-0F46-40F8-93F1-EF5887B4181E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C67C35-0F46-40F8-93F1-EF5887B4181E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C67C35-0F46-40F8-93F1-EF5887B4181E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.WINGRAPHVIZLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WinGraphviz\bin\Debug\Interop.WINGRAPHVIZLib.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -50,10 +46,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WinGraphviz, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WinGraphviz\bin\Debug\WinGraphviz.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox.cs">
@@ -107,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wigraf.WinGraphviz\Wigraf.WinGraphviz.csproj">
+      <Project>{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}</Project>
+      <Name>Wigraf.WinGraphviz</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
