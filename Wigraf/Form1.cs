@@ -31,7 +31,7 @@ namespace Wigraf
                 if (File.Exists(args[0]))
                 {
                     var fi = new FileInfo(args[0]);
-                    if (fi.Extension.ToLower() == ".dot")
+                    if (fi.Extension.ToLower() == ".gv")
                     {
                         OpenFile(args[0]);
                     }
@@ -47,8 +47,8 @@ namespace Wigraf
         private void mnuOpen_Click(object sender, EventArgs e)
         {
             using (var dialog = new OpenFileDialog() { 
-                Filter = "Dot File|*.dot",
-                DefaultExt = "dot",
+                Filter = "Graphviz File|*.gv",
+                DefaultExt = "gv",
                 AddExtension = true,
                 RestoreDirectory = true
             })
@@ -86,8 +86,8 @@ namespace Wigraf
         {
             using (var dialog = new SaveFileDialog()
             {
-                Filter = "Dot File|*.dot",
-                DefaultExt = "dot",
+                Filter = "Graphviz File|*.gv",
+                DefaultExt = "gv",
                 AddExtension = true,
                 RestoreDirectory = true
             })
@@ -161,7 +161,7 @@ namespace Wigraf
             var examplesDirectory = Path.Combine(executableDirectory, "Examples");
             if (Directory.Exists(examplesDirectory))
             {
-                var hello = Path.Combine(examplesDirectory, "HelloWorld.dot");
+                var hello = Path.Combine(examplesDirectory, "HelloWorld.gv");
                 OpenFile(hello);
             }
         }

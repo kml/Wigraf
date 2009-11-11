@@ -35,7 +35,7 @@ WixNetFxExtension.dll
           </Component>
           <Directory Id="examples" Name="Examples">
             <Component Id="dotExamples" DiskId="1" Guid="">
-              <File Id="WGHelloWorld" Source="$(var.Wigraf.TargetDir)\Examples\HelloWorld.dot"/>
+              <File Id="WGHelloWorld" Source="$(var.Wigraf.TargetDir)\Examples\HelloWorld.gv"/>
             </Component>
           </Directory>
         </Directory>
