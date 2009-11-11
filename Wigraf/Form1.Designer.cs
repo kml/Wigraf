@@ -33,17 +33,21 @@
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNew = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.examplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helloWorlddotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.mnuPreview = new System.Windows.Forms.ToolStripButton();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.examplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helloWorlddotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGraphviz = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWinGraphviz = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.mnuSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +70,11 @@
             this.mnuOpen,
             this.examplesToolStripMenuItem,
             this.mnuSave,
+            this.mnuSaveAs,
             this.toolStripMenuItem1,
             this.mnuClose});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            this.plikToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
+            this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
             // 
             // mnuNew
@@ -86,6 +91,21 @@
             this.mnuOpen.Text = "Otwórz...";
             this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
             // 
+            // examplesToolStripMenuItem
+            // 
+            this.examplesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helloWorlddotToolStripMenuItem});
+            this.examplesToolStripMenuItem.Name = "examplesToolStripMenuItem";
+            this.examplesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.examplesToolStripMenuItem.Text = "Przykłady";
+            // 
+            // helloWorlddotToolStripMenuItem
+            // 
+            this.helloWorlddotToolStripMenuItem.Name = "helloWorlddotToolStripMenuItem";
+            this.helloWorlddotToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.helloWorlddotToolStripMenuItem.Text = "HelloWorld.dot";
+            this.helloWorlddotToolStripMenuItem.Click += new System.EventHandler(this.helloWorlddotToolStripMenuItem_Click);
+            // 
             // mnuSave
             // 
             this.mnuSave.Name = "mnuSave";
@@ -93,12 +113,34 @@
             this.mnuSave.Text = "Zapisz";
             this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
             // mnuClose
             // 
             this.mnuClose.Name = "mnuClose";
             this.mnuClose.Size = new System.Drawing.Size(152, 22);
             this.mnuClose.Text = "Zamknij";
             this.mnuClose.Click += new System.EventHandler(this.mnuClose_Click);
+            // 
+            // pomocToolStripMenuItem
+            // 
+            this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuGraphviz,
+            this.mnuWinGraphviz,
+            this.mnuAbout});
+            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
+            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.pomocToolStripMenuItem.Text = "Pomoc";
+            // 
+            // mnuAbout
+            // 
+            this.mnuAbout.Name = "mnuAbout";
+            this.mnuAbout.Size = new System.Drawing.Size(152, 22);
+            this.mnuAbout.Text = "O programie...";
+            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // statusStrip1
             // 
@@ -111,7 +153,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuPreview});
+            this.mnuPreview,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(628, 25);
@@ -130,46 +173,39 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(0, 53);
+            this.txtCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCode.Location = new System.Drawing.Point(0, 49);
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(628, 269);
+            this.txtCode.Size = new System.Drawing.Size(628, 276);
             this.txtCode.TabIndex = 3;
             // 
-            // toolStripMenuItem1
+            // mnuGraphviz
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.mnuGraphviz.Name = "mnuGraphviz";
+            this.mnuGraphviz.Size = new System.Drawing.Size(152, 22);
+            this.mnuGraphviz.Text = "Graphviz";
+            this.mnuGraphviz.Click += new System.EventHandler(this.mnuGraphviz_Click);
             // 
-            // pomocToolStripMenuItem
+            // mnuWinGraphviz
             // 
-            this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuAbout});
-            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
-            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.pomocToolStripMenuItem.Text = "Pomoc";
+            this.mnuWinGraphviz.Name = "mnuWinGraphviz";
+            this.mnuWinGraphviz.Size = new System.Drawing.Size(152, 22);
+            this.mnuWinGraphviz.Text = "WinGraphviz";
+            this.mnuWinGraphviz.Click += new System.EventHandler(this.mnuWinGraphviz_Click);
             // 
-            // mnuAbout
+            // toolStripLabel1
             // 
-            this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(156, 22);
-            this.mnuAbout.Text = "O programie...";
-            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(51, 22);
+            this.toolStripLabel1.Text = "Podgląd";
             // 
-            // examplesToolStripMenuItem
+            // mnuSaveAs
             // 
-            this.examplesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helloWorlddotToolStripMenuItem});
-            this.examplesToolStripMenuItem.Name = "examplesToolStripMenuItem";
-            this.examplesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.examplesToolStripMenuItem.Text = "Przykłady";
-            // 
-            // helloWorlddotToolStripMenuItem
-            // 
-            this.helloWorlddotToolStripMenuItem.Name = "helloWorlddotToolStripMenuItem";
-            this.helloWorlddotToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.helloWorlddotToolStripMenuItem.Text = "HelloWorld.dot";
-            this.helloWorlddotToolStripMenuItem.Click += new System.EventHandler(this.helloWorlddotToolStripMenuItem_Click);
+            this.mnuSaveAs.Name = "mnuSaveAs";
+            this.mnuSaveAs.Size = new System.Drawing.Size(152, 22);
+            this.mnuSaveAs.Text = "Zapisz jako...";
+            this.mnuSaveAs.Click += new System.EventHandler(this.mnuSaveAs_Click);
             // 
             // Form1
             // 
@@ -180,7 +216,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Wigraf";
@@ -210,6 +245,10 @@
         private System.Windows.Forms.ToolStripMenuItem mnuAbout;
         private System.Windows.Forms.ToolStripMenuItem examplesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helloWorlddotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuGraphviz;
+        private System.Windows.Forms.ToolStripMenuItem mnuWinGraphviz;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripMenuItem mnuSaveAs;
     }
 }
 

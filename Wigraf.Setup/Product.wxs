@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+In Project Properties
+Cultures to build: pl-pl
+
+WixUIExtension.dll to references
+WixNetFxExtension.dll
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     >
+  <Product Id="0443bbb1-0447-40c7-82c9-418270e258d2"
+           Name="$(var.Wigraf.ProjectName)"
+           Language="1045" Codepage='1250'
+           Version="1.0.0.0"
+           Manufacturer="Kamil K. Lemański"
+           UpgradeCode="187a923a-1802-4c37-88b7-1f9b3b8eb0f9">
+    <Package Keywords="Instalator"
+             Description="Wigraf Installer - Graphviz (WinGraphviz) Frontend"
+             Comments="kml.jogger.pl"
+             InstallerVersion="200" Compressed="yes" />
+
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLLOCATION" Name="Wigraf">
+          <Component Id="ProductComponent" Guid="61434a2f-1292-46af-8cb5-f3625b6289e0">
+            <File Id="WigrafFile" Name="$(var.Wigraf.TargetFileName)" Source="$(var.Wigraf.TargetPath)" DiskId="1" KeyPath="yes"/>
+            <File Id="WigrafLicense" Source="$(var.SolutionDir)\License.rtf"/>
+            <File Id="WGIcon" Source="$(var.Wigraf.TargetDir)\Icon.ico"/>
+            <File Id="WGInterop" Source="$(var.Wigraf.TargetDir)\Interop.WINGRAPHVIZLib.dll"/>
+            <File Id="WGGraphviz" Source="$(var.Wigraf.TargetDir)\Wigraf.WinGraphviz.dll"/>            
+          </Component>
+          <Directory Id="examples" Name="Examples">
+            <Component Id="dotExamples" DiskId="1" Guid="">
+              <File Id="WGHelloWorld" Source="$(var.Wigraf.TargetDir)\Examples\HelloWorld.dot"/>
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <!-- miejsce na skrót na pulpicie -->
+      <Directory Id="DesktopFolder"/>
+
+      <!-- miejsce na skrót w menu start -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Wigraf"/>
+      </Directory>
+    </Directory>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="DesktopShortcut" Guid="612652bc-9dcb-4185-9932-6a7e6674c9f8">
+        <Shortcut
+          Id="WGDesktopShortcut"
+          Name="Wigraf"
+          Description="Graphviz (WinGraphviz) Frontend"
+          Advertise="no"
+          Target="[INSTALLLOCATION]Wigraf.exe"
+          Directory="DesktopFolder"
+          />
+
+        <!--<RemoveFile Name="HBDesktopShortcut" Id="HBDesktopShortcut" On="uninstall" />-->
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\Wigraf" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="2172f75d-b649-4139-872d-2e4543ea1f2d">
+        <!--
+        How To: Create a Shortcut on the Start Menu
+        http://wix.sourceforge.net/manual-wix3/create_start_menu_shortcut.htm
+        -->
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="Wigraf"
+                  Description="Graphviz (WinGraphviz) Frontend"
+                  Target="[INSTALLLOCATION]Wigraf.exe"
+                  WorkingDirectory="INSTALLLOCATION"/>
+
+        <Shortcut Id="LicenseStartMenuShortcut"
+                  Name="Licencja"
+                  Description="Licencja programu"
+                  Target="[INSTALLLOCATION]License.rtf"
+                  WorkingDirectory="INSTALLLOCATION"/>
+
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\Wigraf" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+
+        <!--
+        How To: Create an Uninstall Shortcut
+        http://wix.sourceforge.net/manual-wix3/create_an_uninstall_shortcut.htm
+        -->
+        <Shortcut Id="UninstallProduct"
+          Name="Usuń program"
+          Target="[System64Folder]msiexec.exe"
+          Arguments="/x [ProductCode]"
+          Description="Odinstaluj Wigraf" />
+      </Component>
+
+    </DirectoryRef>
+
+    <!--Instaluj dla wszystkich użytkowników-->
+    <Property Id="ALLUSERS"><![CDATA[2]]></Property>
+
+    <Feature Id="Complete" Title="Wigraf 0.0.0.1 Beta" Description="Instalator" Display="expand" Level="1" ConfigurableDirectory="INSTALLLOCATION">
+      <Feature Id="ProductFeature" Title="Wigraf" Description="Instalator programu Wigraf" Level="1">
+        <!-- TODO: Remove the comments around this ComponentRef element and the Component above in order to add resources to this installer. -->
+        <ComponentRef Id="ProductComponent" />
+        <ComponentRef Id="dotExamples"/>
+        <ComponentRef Id="ApplicationShortcut" />
+        <ComponentRef Id="DesktopShortcut"/>
+      </Feature>
+    </Feature>
+
+    <!--
+    How To: Check for .NET Framework Versions
+    http://wix.sourceforge.net/manual-wix3/check_for_dotnet.htm
+    -->
+    <PropertyRef Id="NETFRAMEWORK35"/>
+    <Condition
+      Message="Ta aplikacja wymaga .NET Framework 3.5. Zainstaluj go i uruchom instalator ponownie.">
+      NETFRAMEWORK35
+    </Condition>
+
+    <!-- 
+    Include a user interface - to be modified later 
+    http://www.merlinia.com/mdt/WiXTutorial2.msl
+    
+    Lesson 2 User Interface
+    http://www.tramontana.co.hu/wix/lesson2.php
+    -->
+
+    <Property Id="WIXUI_INSTALLDIR">INSTALLLOCATION</Property>
+    <UIRef Id="WixUI_InstallDir" />
+    <!--<UIRef Id="WixUI_Mondo" />-->
+    <!--<UIRef Id="WixUI_Minimal" />-->
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.SolutionDir)\License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Dialog.bmp" />
+
+
+  </Product>
+</Wix>

@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
+using System.Diagnostics;
+
 // WinGraphviz .NET Wrapper
 using Wigraf.WinGraphviz;
 
@@ -20,6 +22,7 @@ namespace Wigraf
         public Form1(string[] args)
         {
             InitializeComponent();
+            Icon = new Icon(this.GetType(), "Icon.ico");
 
             // Opening .dot file from command line
             // and windows file extension association
@@ -75,23 +78,29 @@ namespace Wigraf
             }
             else
             {
-                using (var dialog = new SaveFileDialog()
-                {
-                    Filter = "Dot File|*.dot",
-                    DefaultExt = "dot",
-                    AddExtension = true,
-                    RestoreDirectory = true
-                })
-                {
-                    if (dialog.ShowDialog() == DialogResult.OK)
-                    {
-                        var f = new StreamWriter(dialog.FileName);
-                        f.Write(txtCode.Text);
-                        f.Close();
-                        Title(Path.GetFileName(dialog.FileName));
-                    }
-                }
+                SaveAs();
             }         
+        }
+
+        private void SaveAs()
+        {
+            using (var dialog = new SaveFileDialog()
+            {
+                Filter = "Dot File|*.dot",
+                DefaultExt = "dot",
+                AddExtension = true,
+                RestoreDirectory = true
+            })
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    var f = new StreamWriter(dialog.FileName);
+                    f.Write(txtCode.Text);
+                    f.Close();
+                    fileName = dialog.FileName;
+                    Title(Path.GetFileName(dialog.FileName));
+                }
+            }
         }
 
         private void mnuNew_Click(object sender, EventArgs e)
@@ -113,7 +122,17 @@ namespace Wigraf
 
         private void mnuPreview_Click(object sender, EventArgs e)
         {
-            var dot = new Dot();
+            Dot dot;
+            try
+            {
+                dot = new Dot();
+            }
+            catch (DotInitException)
+            {
+                MessageBox.Show("Nie można utworzyć podglądu. Sprawdź, czy WinGraphviz jest na pewno zainstalowany.", "Błąd inicjalizacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             try
             {
                 dot.Parse(txtCode.Text);
@@ -125,7 +144,7 @@ namespace Wigraf
             }
             catch (DotParseException)
             {
-                MessageBox.Show("Błąd parsowania", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Popraw kod i spróbuj ponownie.", "Błąd parsowania", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -145,6 +164,21 @@ namespace Wigraf
                 var hello = Path.Combine(examplesDirectory, "HelloWorld.dot");
                 OpenFile(hello);
             }
+        }
+
+        private void mnuGraphviz_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.graphviz.org/");
+        }
+
+        private void mnuWinGraphviz_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://wingraphviz.sourceforge.net/wingraphviz/");
+        }
+
+        private void mnuSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveAs();
         }
             
     }

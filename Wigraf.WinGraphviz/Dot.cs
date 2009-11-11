@@ -14,7 +14,15 @@ namespace Wigraf.WinGraphviz
 
         public Dot()
         {
-            dot = new DOTClass();
+            try
+            {
+                dot = new DOTClass();
+            }
+            catch (COMException)
+            {                
+                throw new DotInitException();
+            }
+            
         }
 
         public void Parse(string dotCode)
