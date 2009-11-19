@@ -18,8 +18,12 @@ namespace Wigraf.WinGraphviz
             {
                 dot = new DOTClass();
             }
+            catch (AccessViolationException)
+            {
+                throw new DotAccessException();
+            }
             catch (COMException)
-            {                
+            {
                 throw new DotInitException();
             }
             

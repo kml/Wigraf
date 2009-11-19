@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dot.cs" />
+    <Compile Include="DotAccessException.cs" />
     <Compile Include="DotInitException.cs" />
     <Compile Include="DotParseException.cs" />
     <Compile Include="ExamplesInfo.cs" />

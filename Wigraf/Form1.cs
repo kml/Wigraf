@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
+using System.Threading;
+using System.Globalization;
+
 using System.Diagnostics;
 
 // WinGraphviz .NET Wrapper
@@ -21,7 +24,26 @@ namespace Wigraf
 
         public Form1(string[] args)
         {
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Culture))
+            {
+                SetCultureInfo(Properties.Settings.Default.Culture);
+            }
+
             InitializeComponent();
+
+            switch (Properties.Settings.Default.Culture)
+            {
+                case "pl-PL":
+                    mnuLanguagePolish.Checked = true;
+                    break;
+                case "en-US":
+                    mnuLanguageEnglish.Checked = true;
+                    break;
+                default:
+                    mnuLanguageDefault.Checked = true;
+                    break;
+            }
+
             Icon = new Icon(this.GetType(), "Icon.ico");
 
             // Opening .dot file from command line
@@ -39,16 +61,57 @@ namespace Wigraf
             }
 
             UpdateMenuExamples();
+
+            mnuLanguageDefault.Click += new EventHandler(Language_Click);
+            mnuLanguageEnglish.Click += new EventHandler(Language_Click);
+            mnuLanguagePolish.Click  += new EventHandler(Language_Click);
+        }
+
+        // TODO: for item in languages do ... end ;]
+        void UncheckLanguageMenuItems()
+        {
+            mnuLanguageDefault.Checked = false;
+            mnuLanguageEnglish.Checked = false;
+            mnuLanguagePolish.Checked  = false;
+        }
+
+        void Language_Click(object sender, EventArgs e)
+        {
+            var item = (ToolStripMenuItem)sender;
+
+            // Check only selected language
+            UncheckLanguageMenuItems();
+            item.Checked = true;
+
+            string culture;
+
+            switch (item.Text)
+            {
+                case "Polish (Polski)":
+                    culture = "pl-PL";
+                    break;
+                case "English":
+                    culture = "en-US";
+                    break;
+                default:
+                    culture = "";
+                    break;
+            }
+
+            Properties.Settings.Default.Culture = culture;
+            Properties.Settings.Default.Save();
+
+            MessageBox.Show("Language changed. Restart application and check the result.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void UpdateMenuExamples()
         {            
             examplesToolStripMenuItem.DropDownItems.Clear();
 
-            var browse = new ToolStripMenuItem("Otwórz katalog");
+            var browse = new ToolStripMenuItem(Resources.i18nBrowseDirectory);
             browse.Click += new EventHandler(browse_Click);
 
-            var refresh = new ToolStripMenuItem("Odśwież");
+            var refresh = new ToolStripMenuItem(Resources.i18nRefresh);
             refresh.Click += new EventHandler(refresh_Click);
 
             examplesToolStripMenuItem.DropDownItems.Add(browse);
@@ -82,12 +145,12 @@ namespace Wigraf
                 }
                 else
                 {
-                    MessageBox.Show("Wystąpił błąd podczas otwierania przykładu. Nie usunąłeś go?", "Błąd otwierania przykładu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Resources.i18nExamplesOpenErrorCaption, Resources.i18nExamplesOpenErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Wystąpił błąd podczas otwierania katalogu przykłądów. Nie usunąłeś go?", "Katalog przykładów", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.i18nExamplesOpenDirectoryErrorCaption, Resources.i18nExamplesOpenDirectoryErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -129,6 +192,9 @@ namespace Wigraf
             var f = new StreamReader(path);
             Title(Path.GetFileName(path));
             txtCode.Text = f.ReadToEnd();
+            //txtCode.Text = txtCode.Text.Replace("\r\n", Environment.NewLine);
+            txtCode.Text = txtCode.Text.Replace("\n", Environment.NewLine);
+
             f.Close();
         }
 
@@ -193,7 +259,7 @@ namespace Wigraf
             }
             catch (DotInitException)
             {
-                MessageBox.Show("Nie można utworzyć podglądu. Sprawdź, czy WinGraphviz jest na pewno zainstalowany.", "Błąd inicjalizacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.i18nPreviewInitErrorCaption, Resources.i18nPreviewInitErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             
@@ -208,7 +274,7 @@ namespace Wigraf
             }
             catch (DotParseException)
             {
-                MessageBox.Show("Popraw kod i spróbuj ponownie.", "Błąd parsowania", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.i18nPreviewParseErrorCaption, Resources.i18nPreviewParseErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -237,6 +303,14 @@ namespace Wigraf
             {
                 return Path.Combine(Application.StartupPath, "Examples");
             }
-        }            
+        }
+
+        private static void SetCultureInfo(string culture)
+        {
+            // culture could be "en-US", "de-DE", "pl-PL" etc...
+            CultureInfo myCultureInfo = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = myCultureInfo;
+            Thread.CurrentThread.CurrentUICulture = myCultureInfo;
+        }
     }
 }

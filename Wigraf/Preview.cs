@@ -25,9 +25,10 @@ namespace Wigraf
             picture.Image = img;
         }
 
-        private void mnuPreviewSave_Click(object sender, EventArgs e)
+        private void mnuPreviewSave2_Click(object sender, EventArgs e)
         {
-            using (var dialog = new SaveFileDialog() {
+            using (var dialog = new SaveFileDialog()
+            {
                 Filter = "BMP File (*.bmp)|*.bmp|EMF File (*.emf)|*.emf|EXIF File (*.exif)|*.exif|GIF File (*.gif)|*.gif|ICON File (*.ico)|*.ico|JPEG File (*.jpeg)|*.jpeg|PNG File (*.png)|*.png|TIFF File (*.tiff)|*.tiff|WMF File (*.wmf)|*.wmf",
                 FilterIndex = 7,
                 DefaultExt = "png",
@@ -44,7 +45,6 @@ namespace Wigraf
                     picture.Image.Save(dialog.FileName, format);
                 }
             }
-
         }
     }
 }
