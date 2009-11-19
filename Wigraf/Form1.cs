@@ -37,6 +37,70 @@ namespace Wigraf
                     }
                 }
             }
+
+            UpdateMenuExamples();
+        }
+
+        private void UpdateMenuExamples()
+        {            
+            examplesToolStripMenuItem.DropDownItems.Clear();
+
+            var browse = new ToolStripMenuItem("Otwórz katalog");
+            browse.Click += new EventHandler(browse_Click);
+
+            var refresh = new ToolStripMenuItem("Odśwież");
+            refresh.Click += new EventHandler(refresh_Click);
+
+            examplesToolStripMenuItem.DropDownItems.Add(browse);
+            examplesToolStripMenuItem.DropDownItems.Add(refresh);
+
+            var sep = new ToolStripSeparator();
+            examplesToolStripMenuItem.DropDownItems.Add(sep);
+
+            var ei = new ExamplesInfo(ExamplesDirectory);
+            var examples = ei.GetExamples();
+
+            foreach (var item in examples)
+            {
+                var mnuItem = new ToolStripMenuItem(item.Name);
+                mnuItem.Click += new EventHandler(mnuItem_Click);
+                examplesToolStripMenuItem.DropDownItems.Add(mnuItem);
+            }
+        }
+
+        void mnuItem_Click(object sender, EventArgs e)
+        {
+            var item = (ToolStripMenuItem)sender;
+            var fileName = item.Text;
+
+            if (Directory.Exists(ExamplesDirectory))
+            {
+                var path = Path.Combine(ExamplesDirectory, fileName);
+                if (File.Exists(path))
+                {
+                    OpenFile(path);
+                }
+                else
+                {
+                    MessageBox.Show("Wystąpił błąd podczas otwierania przykładu. Nie usunąłeś go?", "Błąd otwierania przykładu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Wystąpił błąd podczas otwierania katalogu przykłądów. Nie usunąłeś go?", "Katalog przykładów", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void refresh_Click(object sender, EventArgs e)
+        {
+            UpdateMenuExamples();
+            //menuStrip1.Items[0].perf
+            //examplesToolStripMenuItem.ShowDropDown();
+        }
+
+        void browse_Click(object sender, EventArgs e)
+        {
+            Process.Start(ExamplesDirectory);
         }
 
         private void mnuClose_Click(object sender, EventArgs e)
@@ -60,10 +124,10 @@ namespace Wigraf
             }
         }
 
-        private void OpenFile(string fileName)
+        private void OpenFile(string path)
         {
-            var f = new StreamReader(fileName);
-            Title(Path.GetFileName(fileName));
+            var f = new StreamReader(path);
+            Title(Path.GetFileName(path));
             txtCode.Text = f.ReadToEnd();
             f.Close();
         }
@@ -153,19 +217,6 @@ namespace Wigraf
             new AboutBox().ShowDialog();
         }
 
-        // Najprostsze rozwiązanie.
-        // TODO: Sprawdzanie katalogu examples i listowanie plików dot
-        private void helloWorlddotToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var executableDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-            var examplesDirectory = Path.Combine(executableDirectory, "Examples");
-            if (Directory.Exists(examplesDirectory))
-            {
-                var hello = Path.Combine(examplesDirectory, "HelloWorld.gv");
-                OpenFile(hello);
-            }
-        }
-
         private void mnuGraphviz_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.graphviz.org/");
@@ -180,6 +231,12 @@ namespace Wigraf
         {
             SaveAs();
         }
-            
+
+        private string ExamplesDirectory {
+            get
+            {
+                return Path.Combine(Application.StartupPath, "Examples");
+            }
+        }            
     }
 }

@@ -88,8 +88,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Examples\HelloWorld.gv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Examples\hello.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

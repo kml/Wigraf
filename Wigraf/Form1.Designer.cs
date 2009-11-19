@@ -99,13 +99,6 @@
             this.examplesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.examplesToolStripMenuItem.Text = "Przykłady";
             // 
-            // helloWorlddotToolStripMenuItem
-            // 
-            this.helloWorlddotToolStripMenuItem.Name = "helloWorlddotToolStripMenuItem";
-            this.helloWorlddotToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.helloWorlddotToolStripMenuItem.Text = "HelloWorld.gv";
-            this.helloWorlddotToolStripMenuItem.Click += new System.EventHandler(this.helloWorlddotToolStripMenuItem_Click);
-            // 
             // mnuSave
             // 
             this.mnuSave.Name = "mnuSave";
