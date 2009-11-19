@@ -38,6 +38,13 @@ WixNetFxExtension.dll
               <File Id="WGHelloWorld" Source="$(var.Wigraf.TargetDir)\Examples\hello.gv"/>
             </Component>
           </Directory>
+
+          <Directory Id="i18n_pl" Name="pl-PL">
+            <Component Id="i18npl" DiskId="1" Guid="">
+              <File Id="WG_pl_resources" Source="$(var.Wigraf.TargetDir)\pl-PL\Wigraf.resources.dll"/>
+            </Component>
+          </Directory>
+          
         </Directory>
       </Directory>
 
@@ -109,6 +116,7 @@ WixNetFxExtension.dll
         <!-- TODO: Remove the comments around this ComponentRef element and the Component above in order to add resources to this installer. -->
         <ComponentRef Id="ProductComponent" />
         <ComponentRef Id="dotExamples"/>
+        <ComponentRef Id="i18npl"/>        
         <ComponentRef Id="ApplicationShortcut" />
         <ComponentRef Id="DesktopShortcut"/>
       </Feature>
