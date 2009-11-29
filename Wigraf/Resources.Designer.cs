@@ -106,6 +106,24 @@ namespace Wigraf {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an attempt to access protected memory..
+        /// </summary>
+        internal static string i18nPreviewAccessErrorCaption {
+            get {
+                return ResourceManager.GetString("i18nPreviewAccessErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Error.
+        /// </summary>
+        internal static string i18nPreviewAccessErrorTitle {
+            get {
+                return ResourceManager.GetString("i18nPreviewAccessErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Preview can not be created. Is WinGraphviz installed?.
         /// </summary>
         internal static string i18nPreviewInitErrorCaption {

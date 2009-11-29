@@ -257,6 +257,11 @@ namespace Wigraf
             {
                 dot = new Dot();
             }
+            catch (DotAccessException)
+            {
+                MessageBox.Show(Resources.i18nPreviewAccessErrorCaption, Resources.i18nPreviewAccessErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             catch (DotInitException)
             {
                 MessageBox.Show(Resources.i18nPreviewInitErrorCaption, Resources.i18nPreviewInitErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);

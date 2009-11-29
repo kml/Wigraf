@@ -132,6 +132,12 @@
   <data name="i18nExamplesOpenErrorTitle" xml:space="preserve">
     <value>Błąd otwierania przykładu</value>
   </data>
+  <data name="i18nPreviewAccessErrorCaption" xml:space="preserve">
+    <value>Próba dostępu do pamięci chronionej.</value>
+  </data>
+  <data name="i18nPreviewAccessErrorTitle" xml:space="preserve">
+    <value>Błąd dostępu</value>
+  </data>
   <data name="i18nPreviewInitErrorCaption" xml:space="preserve">
     <value>Nie można utworzyć podglądu. Sprawdź, czy WinGraphviz jest na pewno zainstalowany.</value>
   </data>

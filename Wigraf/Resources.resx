@@ -132,6 +132,12 @@
   <data name="i18nExamplesOpenErrorTitle" xml:space="preserve">
     <value>Example error</value>
   </data>
+  <data name="i18nPreviewAccessErrorCaption" xml:space="preserve">
+    <value>There was an attempt to access protected memory.</value>
+  </data>
+  <data name="i18nPreviewAccessErrorTitle" xml:space="preserve">
+    <value>Access Error</value>
+  </data>
   <data name="i18nPreviewInitErrorCaption" xml:space="preserve">
     <value>Preview can not be created. Is WinGraphviz installed?</value>
   </data>
