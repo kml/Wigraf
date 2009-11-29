@@ -122,13 +122,13 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mnuNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="mnuNew.Text" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="mnuOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="mnuOpen.Text" xml:space="preserve">
     <value>Open...</value>
@@ -137,82 +137,82 @@
     <value>67, 22</value>
   </data>
   <data name="examplesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="examplesToolStripMenuItem.Text" xml:space="preserve">
     <value>Examples</value>
   </data>
   <data name="mnuSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="mnuSave.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="mnuSaveAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="mnuSaveAs.Text" xml:space="preserve">
     <value>Save As...</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>122, 6</value>
   </data>
   <data name="mnuClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="mnuClose.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="plikToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+    <value>35, 20</value>
   </data>
   <data name="plikToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="mnuLanguageDefault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>138, 22</value>
   </data>
   <data name="mnuLanguageDefault.Text" xml:space="preserve">
     <value>(Default)</value>
   </data>
   <data name="mnuLanguageEnglish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>138, 22</value>
   </data>
   <data name="mnuLanguageEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="mnuLanguagePolish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>138, 22</value>
   </data>
   <data name="mnuLanguagePolish.Text" xml:space="preserve">
     <value>Polish (Polski)</value>
   </data>
   <data name="lToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
+    <value>66, 20</value>
   </data>
   <data name="lToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
   <data name="mnuGraphviz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="mnuGraphviz.Text" xml:space="preserve">
     <value>Graphviz</value>
   </data>
   <data name="mnuWinGraphviz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="mnuWinGraphviz.Text" xml:space="preserve">
     <value>WinGraphviz</value>
   </data>
   <data name="mnuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="mnuAbout.Text" xml:space="preserve">
     <value>About...</value>
   </data>
   <data name="pomocToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+    <value>40, 20</value>
   </data>
   <data name="pomocToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
@@ -243,7 +243,7 @@
     <value>3</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 17</value>
+    <value>0, 325</value>
   </metadata>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 325</value>
@@ -319,7 +319,7 @@
     <value>Preview</value>
   </data>
   <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 22</value>
+    <value>45, 22</value>
   </data>
   <data name="toolStripLabel1.Text" xml:space="preserve">
     <value>Preview</value>
@@ -451,6 +451,12 @@
   <data name="&gt;&gt;lToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;mnuLanguageDefault.Name" xml:space="preserve">
+    <value>mnuLanguageDefault</value>
+  </data>
+  <data name="&gt;&gt;mnuLanguageDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mnuLanguageEnglish.Name" xml:space="preserve">
     <value>mnuLanguageEnglish</value>
   </data>
@@ -461,12 +467,6 @@
     <value>mnuLanguagePolish</value>
   </data>
   <data name="&gt;&gt;mnuLanguagePolish.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuLanguageDefault.Name" xml:space="preserve">
-    <value>mnuLanguageDefault</value>
-  </data>
-  <data name="&gt;&gt;mnuLanguageDefault.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pomocToolStripMenuItem.Name" xml:space="preserve">

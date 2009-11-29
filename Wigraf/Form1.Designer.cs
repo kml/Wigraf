@@ -40,9 +40,9 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
             this.lToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLanguageDefault = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLanguageEnglish = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLanguagePolish = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuLanguageDefault = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGraphviz = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWinGraphviz = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,6 +134,11 @@
             this.lToolStripMenuItem.Name = "lToolStripMenuItem";
             resources.ApplyResources(this.lToolStripMenuItem, "lToolStripMenuItem");
             // 
+            // mnuLanguageDefault
+            // 
+            this.mnuLanguageDefault.Name = "mnuLanguageDefault";
+            resources.ApplyResources(this.mnuLanguageDefault, "mnuLanguageDefault");
+            // 
             // mnuLanguageEnglish
             // 
             this.mnuLanguageEnglish.Name = "mnuLanguageEnglish";
@@ -143,11 +148,6 @@
             // 
             this.mnuLanguagePolish.Name = "mnuLanguagePolish";
             resources.ApplyResources(this.mnuLanguagePolish, "mnuLanguagePolish");
-            // 
-            // mnuLanguageDefault
-            // 
-            this.mnuLanguageDefault.Name = "mnuLanguageDefault";
-            resources.ApplyResources(this.mnuLanguageDefault, "mnuLanguageDefault");
             // 
             // pomocToolStripMenuItem
             // 

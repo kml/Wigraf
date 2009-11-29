@@ -35,7 +35,21 @@ WixNetFxExtension.dll
           </Component>
           <Directory Id="examples" Name="Examples">
             <Component Id="dotExamples" DiskId="1" Guid="">
-              <File Id="WGHelloWorld" Source="$(var.Wigraf.TargetDir)\Examples\hello.gv"/>
+              <File Id="WGcluster" Source="$(var.Wigraf.TargetDir)\Examples\cluster.gv"/>
+              <File Id="WGcrazy" Source="$(var.Wigraf.TargetDir)\Examples\crazy.gv"/>
+              <File Id="WGdatastruct" Source="$(var.Wigraf.TargetDir)\Examples\datastruct.gv"/>
+              <File Id="WGER" Source="$(var.Wigraf.TargetDir)\Examples\ER.gv"/>
+              <File Id="WGfdpclust" Source="$(var.Wigraf.TargetDir)\Examples\fdpclust.gv"/>
+              <File Id="WGfsm" Source="$(var.Wigraf.TargetDir)\Examples\fsm.gv"/>
+              <File Id="WGhello" Source="$(var.Wigraf.TargetDir)\Examples\hello.gv"/>
+              <File Id="WGlion_share" Source="$(var.Wigraf.TargetDir)\Examples\lion_share.gv"/>
+              <File Id="WGphilo" Source="$(var.Wigraf.TargetDir)\Examples\philo.gv"/>
+              <File Id="WGprocess" Source="$(var.Wigraf.TargetDir)\Examples\process.gv"/>
+              <File Id="WGprofile" Source="$(var.Wigraf.TargetDir)\Examples\profile.gv"/>
+              <File Id="WGsiblings" Source="$(var.Wigraf.TargetDir)\Examples\siblings.gv"/>
+              <File Id="WGswitch" Source="$(var.Wigraf.TargetDir)\Examples\switch.gv"/>
+              <File Id="WGunix" Source="$(var.Wigraf.TargetDir)\Examples\unix.gv"/>
+              <File Id="WGworld" Source="$(var.Wigraf.TargetDir)\Examples\world.gv"/>
             </Component>
           </Directory>
 

@@ -1,1 +1,5 @@
+/*
+Hello World
+http://www.graphviz.org/Gallery/directed/hello.html
+*/
 digraph G {Hello->World}
