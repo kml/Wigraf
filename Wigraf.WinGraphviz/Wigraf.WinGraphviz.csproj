@@ -8,7 +8,7 @@
     <ProjectGuid>{DABF1192-DE8F-454D-813D-3C6AD0D08B4D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Wigraf.WinGraphviz</RootNamespace>
+    <RootNamespace>Wigraf.Views.WinGraphviz</RootNamespace>
     <AssemblyName>Wigraf.WinGraphviz</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

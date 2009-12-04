@@ -1,6 +1,6 @@
-﻿namespace Wigraf
+﻿namespace Wigraf.Views
 {
-    partial class AboutBox
+    partial class AboutBoxView
     {
         /// <summary>
         /// Required designer variable.
@@ -27,7 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBoxView));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
@@ -96,7 +96,7 @@
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.okButton.Name = "okButton";
             // 
-            // AboutBox
+            // AboutBoxView
             // 
             this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
@@ -105,7 +105,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AboutBox";
+            this.Name = "AboutBoxView";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.tableLayoutPanel.ResumeLayout(false);

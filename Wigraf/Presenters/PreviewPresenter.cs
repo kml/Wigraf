@@ -1,31 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
 using System.IO;
 
 using Wigraf.WinGraphviz.Helpers;
+using Wigraf.Interfaces;
+using Wigraf.Views;
 
-namespace Wigraf
+using System.Drawing;
+
+namespace Wigraf.Presenters
 {
-    public partial class Preview : Form
+    public class PreviewPresenter
     {
-        public Preview()
+        private readonly IPreviewView m_view;
+
+        public PreviewPresenter()
         {
-            InitializeComponent();
+            m_view = new PreviewView();
+            m_view.SaveClicked += SaveClicked;
         }
 
-        public void Image(Image img)
+        public void ShowDialog()
         {
-            picture.Image = img;
+            m_view.ShowDialog();
         }
 
-        private void mnuPreviewSave2_Click(object sender, EventArgs e)
+        public Image Image
+        {
+            get { return m_view.Image; }
+            set { m_view.Image = value; }
+        }
+
+        public void SaveClicked(object sender, EventArgs e)
         {
             using (var dialog = new SaveFileDialog()
             {
@@ -42,7 +51,7 @@ namespace Wigraf
                     var ext = fi.Extension.ToLower().Substring(1);
                     var converter = new StringToImageFormatConverter();
                     var format = converter.Convert(ext);
-                    picture.Image.Save(dialog.FileName, format);
+                    m_view.Image.Save(dialog.FileName, format);
                 }
             }
         }

@@ -1,6 +1,6 @@
-﻿namespace Wigraf
+﻿namespace Wigraf.Views
 {
-    partial class Form1
+    partial class MainView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,13 +82,11 @@
             // 
             this.mnuNew.Name = "mnuNew";
             resources.ApplyResources(this.mnuNew, "mnuNew");
-            this.mnuNew.Click += new System.EventHandler(this.mnuNew_Click);
             // 
             // mnuOpen
             // 
             this.mnuOpen.Name = "mnuOpen";
             resources.ApplyResources(this.mnuOpen, "mnuOpen");
-            this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
             // 
             // examplesToolStripMenuItem
             // 
@@ -106,13 +104,11 @@
             // 
             this.mnuSave.Name = "mnuSave";
             resources.ApplyResources(this.mnuSave, "mnuSave");
-            this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
             // mnuSaveAs
             // 
             this.mnuSaveAs.Name = "mnuSaveAs";
             resources.ApplyResources(this.mnuSaveAs, "mnuSaveAs");
-            this.mnuSaveAs.Click += new System.EventHandler(this.mnuSaveAs_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -123,7 +119,6 @@
             // 
             this.mnuClose.Name = "mnuClose";
             resources.ApplyResources(this.mnuClose, "mnuClose");
-            this.mnuClose.Click += new System.EventHandler(this.mnuClose_Click);
             // 
             // lToolStripMenuItem
             // 
@@ -162,19 +157,16 @@
             // 
             this.mnuGraphviz.Name = "mnuGraphviz";
             resources.ApplyResources(this.mnuGraphviz, "mnuGraphviz");
-            this.mnuGraphviz.Click += new System.EventHandler(this.mnuGraphviz_Click);
             // 
             // mnuWinGraphviz
             // 
             this.mnuWinGraphviz.Name = "mnuWinGraphviz";
             resources.ApplyResources(this.mnuWinGraphviz, "mnuWinGraphviz");
-            this.mnuWinGraphviz.Click += new System.EventHandler(this.mnuWinGraphviz_Click);
             // 
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
             resources.ApplyResources(this.mnuAbout, "mnuAbout");
-            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // statusStrip1
             // 
@@ -194,7 +186,6 @@
             this.mnuPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.mnuPreview, "mnuPreview");
             this.mnuPreview.Name = "mnuPreview";
-            this.mnuPreview.Click += new System.EventHandler(this.mnuPreview_Click);
             // 
             // toolStripLabel1
             // 
@@ -206,7 +197,7 @@
             resources.ApplyResources(this.txtCode, "txtCode");
             this.txtCode.Name = "txtCode";
             // 
-            // Form1
+            // MainView
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,7 +206,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainView";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

@@ -6,11 +6,11 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Wigraf
+namespace Wigraf.Views
 {
-    partial class AboutBox : Form
+    partial class AboutBoxView : Form
     {
-        public AboutBox()
+        public AboutBoxView()
         {
             InitializeComponent();
             this.Text = String.Format("{0}", AssemblyTitle);

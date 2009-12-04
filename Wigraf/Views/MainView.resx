@@ -122,13 +122,13 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mnuNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="mnuNew.Text" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="mnuOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="mnuOpen.Text" xml:space="preserve">
     <value>Open...</value>
@@ -137,82 +137,82 @@
     <value>67, 22</value>
   </data>
   <data name="examplesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="examplesToolStripMenuItem.Text" xml:space="preserve">
     <value>Examples</value>
   </data>
   <data name="mnuSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="mnuSave.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="mnuSaveAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="mnuSaveAs.Text" xml:space="preserve">
     <value>Save As...</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 6</value>
+    <value>120, 6</value>
   </data>
   <data name="mnuClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
+    <value>123, 22</value>
   </data>
   <data name="mnuClose.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="plikToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
+    <value>37, 20</value>
   </data>
   <data name="plikToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="mnuLanguageDefault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="mnuLanguageDefault.Text" xml:space="preserve">
     <value>(Default)</value>
   </data>
   <data name="mnuLanguageEnglish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="mnuLanguageEnglish.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="mnuLanguagePolish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="mnuLanguagePolish.Text" xml:space="preserve">
     <value>Polish (Polski)</value>
   </data>
   <data name="lToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
+    <value>71, 20</value>
   </data>
   <data name="lToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
   <data name="mnuGraphviz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="mnuGraphviz.Text" xml:space="preserve">
     <value>Graphviz</value>
   </data>
   <data name="mnuWinGraphviz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="mnuWinGraphviz.Text" xml:space="preserve">
     <value>WinGraphviz</value>
   </data>
   <data name="mnuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
+    <value>141, 22</value>
   </data>
   <data name="mnuAbout.Text" xml:space="preserve">
     <value>About...</value>
   </data>
   <data name="pomocToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+    <value>44, 20</value>
   </data>
   <data name="pomocToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
@@ -319,7 +319,7 @@
     <value>Preview</value>
   </data>
   <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 22</value>
+    <value>48, 22</value>
   </data>
   <data name="toolStripLabel1.Text" xml:space="preserve">
     <value>Preview</value>
@@ -387,6 +387,28 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>628, 347</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAD/8AAAAAAAAA8AAAAAAAAP/wD/8AAAAPAPDwAPAAAA8A8P
+        AA8AAADwDw8ADwAAAA//DwAPAADwAPAPAA8AAPAA8A8ADwAPDw8PAP/wAA8PDw8AAAAADwDwDwAAAADw
+        APAA8AAAAPAA8ADwAAAP/w//D/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
+        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//8AAAAAAAAAAAAAAAD/8A
+        AA//AAAAAAAAAAAAAPAAAAAAAPAAAAAAAAAAAA8AD/AAAAAPAAAAAAAAAADwAA/wAAAAAPAAAAAAAAAP
+        AAAP8AAAAAAPAAAAAAAADwD///AA//8ADwAAAAAAAA8P8A/wD/AP8A8AAAAAAADwD/AP8A/wD/AA8AAA
+        AAAA8A/wD/AP8A/wAPAAAAAAAPAP8A/wD/AP8ADwAAAAAADwD/AP8A/wD/AA8AAAAAAADwD///AP8A/w
+        DwAAAAAAAA8AAAAAD/AP8A8AAAAAAAAPAAAAAA/wD/APAAAAAAAAAPAAAAAA//8A8AAAAAAAAAAPAAAA
+        AAAADwAAAAAAAAAAAPAAAAAAAPAAAAAP8AAP8AAP/wAAD/8AAAAAD/AAD/AAAAD///AAAAAAAA/wAA/w
+        AAAAAAAAAAAAAAD//wD//wAAAAAAAAAAAAAA/w8A8P8AAAAAAAAAAAAAD/AP//AP8AAAAAAAAAAAAA/w
+        D//wD/AAAAAAAAAAAAD/AAD/AAD/AAAAAAAAAAAA/wAA/wAA/wAAAAAAAAAAAP8AAP8AAP8AAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Wigraf</value>
@@ -506,7 +528,7 @@
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
+    <value>MainView</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

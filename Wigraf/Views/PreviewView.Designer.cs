@@ -1,6 +1,6 @@
-﻿namespace Wigraf
+﻿namespace Wigraf.Views
 {
-    partial class Preview
+    partial class PreviewView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Preview));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreviewView));
             this.picture = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.mnuPreviewSave2 = new System.Windows.Forms.ToolStripButton();
@@ -55,20 +55,14 @@
             this.mnuPreviewSave2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.mnuPreviewSave2, "mnuPreviewSave2");
             this.mnuPreviewSave2.Name = "mnuPreviewSave2";
-            this.mnuPreviewSave2.Click += new System.EventHandler(this.mnuPreviewSave2_Click);
             // 
-            // mnuPreviewSave
-            // 
-            this.mnuPreviewSave.Name = "mnuPreviewSave";
-            resources.ApplyResources(this.mnuPreviewSave, "mnuPreviewSave");
-            // 
-            // Preview
+            // PreviewView
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.picture);
-            this.Name = "Preview";
+            this.Name = "PreviewView";
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
