@@ -13,7 +13,7 @@ WixNetFxExtension.dll
   <Product Id="67649292-2d95-463d-b7cd-91b9b2e484ff"
            Name="$(var.Wigraf.ProjectName)"
            Language="1045" Codepage='1250'
-           Version="0.0.0.2"
+           Version="0.0.0.3"
            Manufacturer="Kamil K. Lemański"
            UpgradeCode="fdcb4008-d872-407b-a923-8d8228d9e819">
     <Package Keywords="Instalator"

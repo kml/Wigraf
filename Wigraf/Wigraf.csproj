@@ -71,6 +71,11 @@
     <Compile Include="Interfaces\IPreviewView.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Presenters\PreviewPresenter.cs" />
+    <Compile Include="Resources.pl-PL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.pl-PL.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AboutBoxView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,13 +187,19 @@
     <EmbeddedResource Include="Views\PreviewView.pl-PL.resx">
       <DependentUpon>PreviewView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources.pl-PL.resx" />
+    <EmbeddedResource Include="Resources.pl-PL.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pl-PL.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="Images\image.png" />
     <Content Include="Images\kfloppy.png" />
+    <Content Include="Images\Menu\NewDocumentHS.png" />
+    <Content Include="Images\Menu\openHS.png" />
+    <Content Include="Images\Menu\saveHS.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Wigraf.WinGraphviz\Wigraf.WinGraphviz.csproj">
