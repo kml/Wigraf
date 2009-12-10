@@ -18,6 +18,8 @@ namespace Wigraf.Views
     public partial class PreviewView : Form, IPreviewView
     {
         public event EventHandler SaveClicked;
+        public event EventHandler SizeNormalClicked;
+        public event EventHandler SizeZoomClicked;
 
         public PreviewView()
         {
@@ -28,6 +30,24 @@ namespace Wigraf.Views
             {
                 SaveClicked(this, new EventArgs());
             };
+
+            mnuSizeNormal.Click += delegate(object sender, EventArgs e)
+            {
+                SizeNormalClicked(this, new EventArgs());
+            };
+
+            mnuSizeZoom.Click += delegate(object sender, EventArgs e)
+            {
+                SizeZoomClicked(this, new EventArgs());
+            };
+        }
+
+        public PictureBox Picture
+        {
+            get
+            {
+                return picture;
+            }
         }
 
         public Image Image

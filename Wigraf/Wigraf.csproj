@@ -195,11 +195,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="Images\3floppy_unmount.ico" />
     <Content Include="Images\image.png" />
     <Content Include="Images\kfloppy.png" />
-    <Content Include="Images\Menu\NewDocumentHS.png" />
-    <Content Include="Images\Menu\openHS.png" />
-    <Content Include="Images\Menu\saveHS.png" />
+    <Content Include="Images\viewmag.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Wigraf.WinGraphviz\Wigraf.WinGraphviz.csproj">

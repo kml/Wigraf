@@ -128,14 +128,11 @@
   <data name="picture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 30, 3, 3</value>
   </data>
-  <data name="picture.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 30, 0, 0</value>
-  </data>
   <data name="picture.Size" type="System.Drawing.Size, System.Drawing">
     <value>437, 294</value>
   </data>
   <data name="picture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+    <value>Zoom</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="picture.TabIndex" type="System.Int32, mscorlib">
@@ -158,32 +155,18 @@
   </metadata>
   <data name="mnuPreviewSave2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        uSUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVDhPzZNPSNphHMZtmiaIl0CazFAESRAJwREj8CID
+        b4oeVAq0Q+AgFC+SwWAHqUPeIhmsEWNRjp9CiKJIQoJ4WBAYCIKoCIn4ryxit56978sM2mHssMN+8PDy
+        vu/v+fB93vf78nj/xcfn8+0qlepUrVYnfombn58/VigUX6nkcvkXmUx2QDU7O/tJKBS+J4VPPRU/Nzd3
+        mslk0Ov1MBwOcXNzg9vb2yfR+WAwQLfbxcXFBZxO5yMxyyeAKaVS+T2RSKDf7zPzeDzG3d0d7u/v2Ujn
+        o9GI7V9eXmJ5eRnE/GYC4Gs0mnY8Hn8GoOaJJgBaYaVSgUgkogD3BCAmgB8nJycMQEunxoeHhyfROV2n
+        gGq1CoFAQAHhCeCVTqdDMpn8I4BG63Q6qNfrIAeOmZmZjwxAaK8XFxcRjUaRy+VQKBRwfn6OYrGIUqmE
+        crnMRrqWz+eRSqVgMBhAbiPLABKJxLq0tAS9Xs8UCASwubn5TOFwGKFQCCsrK3A4HDAajVhYWKgS+wse
+        ucJ3FosFZrMZJpMJZ2dnDHJ4eIhWq4Xr62uWnUaIxWIMYrVa6b9jAhDxSON8WF1dZRsul4vFsNvt2N3d
+        Ra1WQ6PRQLvdZtn39/extrYGr9cLt9tNe+Elj1zJW5vNNqQlbm1t4erqCnt7e0in08zcbDbZSKvJZrPY
+        3t7Gzs4OIpEIxGKxkZ3D9PS0geT/TBrkyO/3fwsGg9zGxgbn8/m49fV1zuPxcKRKjsQ81mq1R6S9j6RS
+        6QGxyn5/i7S//1b/5h3/BIYNthXNUutyAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="mnuPreviewSave2.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -194,6 +177,45 @@
   </data>
   <data name="mnuPreviewSave2.Text" xml:space="preserve">
     <value>Save</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="mnuSizeNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="mnuSizeNormal.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="mnuSizeZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="mnuSizeZoom.Text" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="toolStripDropDownButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAITSURBVDhPY2BAAKb4+PjoOXPmbN6wYeP5FStW7MrOzs4A
+        SrMiqcHOlJeX51i4cOG2Bw8e/P/58ycQ/wLTb9+++79169ZD4uLi3HgNaWxsnPTq1ev/P36ANEMwiP39
+        +4//nz59/g80fDZOA4C2C1y6dPnHt2/f///58+f/r1+/wJphBnz79u3/69dv/hgYGKhiNcTNzc3x4cNH
+        /799+wHGIFtBGML//v/r1+//37//8B8aHphm+Pj4OD958hTo1C//v3z5BtYE0/j587f/Hz9+Brrg7f+8
+        vMJirC7Q0NAQfvToyU+Qws+fv4INAdkK0gzy//v3n/6/e/fxP9AiT5zhMHPmzCkgA0A2I/sfZBhI/OzZ
+        czcJRSf7+vXr137+/OXf799/wIEJikqQgffvP/g3f96s00pKSvwE00NiYmLY/v3797569erFzZu3bk2e
+        PHmqhYWF9bx5c++1trZeUlZWtiRoCDYFOjo6egkJCT8rKio+SkpKWpNliLm5eZC/v/9PoCs/CgoKkmeI
+        np5ekL29/U8HB4ePHBwc5BmiqqoapKur+1NKSuoj0CsoYcKkpaXFpq6uzgtKG2pqaiKKioriwKQuAWKD
+        sIqKCh8QswMNCAWGxS+gAVUMQCdJFBQUhNXX15e1tLS0d3R0TZg1a/bUadNmzJo+ffpsEIawZ02bMGHC
+        xObm1o6mpqbqxMTkMnd3d3UANd1jui93vgAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripDropDownButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 22</value>
+  </data>
+  <data name="toolStripDropDownButton1.Text" xml:space="preserve">
+    <value>Size Mode</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -242,6 +264,30 @@
   </data>
   <data name="&gt;&gt;mnuPreviewSave2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripDropDownButton1.Name" xml:space="preserve">
+    <value>toolStripDropDownButton1</value>
+  </data>
+  <data name="&gt;&gt;toolStripDropDownButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSizeNormal.Name" xml:space="preserve">
+    <value>mnuSizeNormal</value>
+  </data>
+  <data name="&gt;&gt;mnuSizeNormal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSizeZoom.Name" xml:space="preserve">
+    <value>mnuSizeZoom</value>
+  </data>
+  <data name="&gt;&gt;mnuSizeZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mnuPreviewSave.Name" xml:space="preserve">
     <value>mnuPreviewSave</value>

@@ -10,7 +10,11 @@ namespace Wigraf.Interfaces
     public interface IPreviewView
     {
         Image Image { get; set; }
+        PictureBox Picture { get; }
         DialogResult ShowDialog();
+
         event EventHandler SaveClicked;
+        event EventHandler SizeNormalClicked;
+        event EventHandler SizeZoomClicked;
     }
 }

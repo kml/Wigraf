@@ -123,4 +123,13 @@
   <data name="mnuPreviewSave2.Text" xml:space="preserve">
     <value>Zapisz</value>
   </data>
+  <data name="mnuSizeNormal.Text" xml:space="preserve">
+    <value>Normalny</value>
+  </data>
+  <data name="mnuSizeZoom.Text" xml:space="preserve">
+    <value>Skalowany</value>
+  </data>
+  <data name="toolStripDropDownButton1.Text" xml:space="preserve">
+    <value>Tryb wyświetlania</value>
+  </data>
 </root>

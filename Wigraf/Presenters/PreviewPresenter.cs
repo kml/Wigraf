@@ -21,6 +21,18 @@ namespace Wigraf.Presenters
         {
             m_view = new PreviewView();
             m_view.SaveClicked += SaveClicked;
+            m_view.SizeNormalClicked += m_view_SizeNormalClicked;
+            m_view.SizeZoomClicked += m_view_SizeZoomClicked;
+        }
+
+        void m_view_SizeZoomClicked(object sender, EventArgs e)
+        {
+            m_view.Picture.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        void m_view_SizeNormalClicked(object sender, EventArgs e)
+        {
+            m_view.Picture.SizeMode = PictureBoxSizeMode.Normal;
         }
 
         public void ShowDialog()
